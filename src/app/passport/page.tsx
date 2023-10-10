@@ -15,10 +15,8 @@ const passportInstance = new passport.Passport({
 
 export default function Passport() {
   useEffect(() => {
-    window.addEventListener("load", function () {
-      passportInstance.loginCallback();
-    });
-  }, []);
+    passportInstance?.loginCallback();
+  }, [passportInstance]);
 
   return (
     <main>
